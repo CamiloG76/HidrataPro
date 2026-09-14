@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HidrataPro - Recordatorios</title>
+    
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+        <h1>HidrataPro</h1>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="hu01-registro.html">Registro</a>
+            <a href="hu02-ingesta.html">Registrar agua</a>
+            <a href="hu03-progreso.html">Progreso</a>
+            <a href="hu04-recordatorios.html">Recordatorios</a>
+            <a href="hu05-meta.html">Meta diaria</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section class="recordatorios">
+
+            <h2>Recordatorios de hidratación</h2>
+
+            <p>
+                Programa recordatorios para no olvidar tomar agua
+                durante tu jornada laboral.
+            </p>
+
+
+            <!-- CONFIGURACIÓN DE RECORDATORIOS -->
+            <form>
+
+                <div class="campo-formulario">
+
+                    <label for="intervalo">
+                        ¿Cada cuánto quieres recibir un recordatorio?
+                    </label>
+
+                    <select id="intervalo" name="intervalo">
+
+                        <option value="">
+                            Selecciona un intervalo
+                        </option>
+
+                        <option value="30">
+                            Cada 30 minutos
+                        </option>
+
+                        <option value="60">
+                            Cada 1 hora
+                        </option>
+
+                        <option value="90">
+                            Cada 1 hora y 30 minutos
+                        </option>
+
+                        <option value="120">
+                            Cada 2 horas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="hora-inicio">
+                        Hora de inicio
+                    </label>
+
+                    <input
+                        type="time"
+                        id="hora-inicio"
+                        name="hora-inicio"
+                    >
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="hora-fin">
+                        Hora de finalización
+                    </label>
+
+                    <input
+                        type="time"
+                        id="hora-fin"
+                        name="hora-fin"
+                    >
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="notificaciones">
+                        Activar recordatorios
+                    </label>
+
+                    <input
+                        type="checkbox"
+                        id="notificaciones"
+                        name="notificaciones"
+                    >
+
+                </div>
+
+
+                <button type="submit">
+                    Guardar configuración
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            HidrataPro - Tu hidratación durante la jornada laboral
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
