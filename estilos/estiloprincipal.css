@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #1f2937;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1976d2;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.bienvenida {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.bienvenida h2 {
+    font-size: 36px;
+    color: #1976d2;
+    margin-bottom: 20px;
+}
+
+.bienvenida p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.opciones {
+    padding: 20px 0 60px;
+}
+
+.opciones h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1976d2;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tarjeta h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #1976d2;
+}
+
+.tarjeta p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.tarjeta a {
+    display: inline-block;
+    background-color: #1976d2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.tarjeta a:hover {
+    background-color: #125ca3;
+}
+
+footer {
+    background-color: #1976d2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .bienvenida {
+        padding: 45px 10px 30px;
+    }
+
+    .bienvenida h2 {
+        font-size: 28px;
+    }
+
+    .bienvenida p {
+        font-size: 16px;
+    }
+
+    .opciones h2 {
+        font-size: 24px;
+    }
+}
