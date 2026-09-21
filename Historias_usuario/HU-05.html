@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HidrataPro - Meta diaria</title>
+
+    <link rel="stylesheet" href="../estilos/estiloregistro.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="encabezado__contenido">
+            <a href="../index.html" class="encabezado__logo">
+                HidrataPro
+            </a>
+
+            <nav class="navegacion">
+                <a href="../index.html">Inicio</a>
+                <a href="hu02-ingesta.html">Registrar agua</a>
+                <a href="hu03-progreso.html">Mi progreso</a>
+                <a href="hu04-recordatorios.html">Recordatorios</a>
+                <a href="hu05-meta.html">Meta diaria</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="meta">
+
+        <section class="meta__contenido">
+
+            <div class="meta__encabezado">
+                <p class="meta__rotulo">HIDRATACIÓN</p>
+
+                <h1 class="meta__titulo">
+                    Configura tu meta diaria
+                </h1>
+
+                <p class="meta__descripcion">
+                    Establece la cantidad de agua que deseas consumir
+                    durante el día.
+                </p>
+            </div>
+
+
+            <div class="meta__tarjeta">
+
+                <div class="meta__icono">
+                    💧
+                </div>
+
+                <h2 class="meta__subtitulo">
+                    ¿Cuál es tu meta diaria?
+                </h2>
+
+                <p class="meta__texto">
+                    Selecciona la cantidad de agua que quieres consumir
+                    diariamente.
+                </p>
+
+
+                <form class="meta__formulario">
+
+                    <div class="meta__campo">
+                        <label for="meta">
+                            Meta diaria de agua
+                        </label>
+
+                        <div class="meta__entrada">
+                            <input
+                                type="number"
+                                id="meta"
+                                name="meta"
+                                min="500"
+                                step="250"
+                                placeholder="2000"
+                            >
+
+                            <span>ml</span>
+                        </div>
+                    </div>
+
+
+                    <div class="meta__opciones">
+
+                        <button type="button">
+                            1500 ml
+                        </button>
+
+                        <button type="button">
+                            2000 ml
+                        </button>
+
+                        <button type="button">
+                            2500 ml
+                        </button>
+
+                        <button type="button">
+                            3000 ml
+                        </button>
+
+                    </div>
+
+
+                    <button type="submit" class="boton boton--principal">
+                        Guardar meta
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="pie">
+
+        <p>
+            © 2026 HidrataPro
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```

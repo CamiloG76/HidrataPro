@@ -1,0 +1,531 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f9fb;
+    color: #243238;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbe7eb;
+    padding: 18px 40px;
+}
+
+.encabezado__contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.encabezado__logo {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #1d9cc2;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #40535a;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.navegacion a:hover {
+    color: #1d9cc2;
+}
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+.progreso {
+    flex: 1;
+    padding: 60px 20px;
+}
+
+.progreso__contenido {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.progreso__encabezado {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.progreso__rotulo {
+    color: #1d9cc2;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.progreso__titulo {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.progreso__descripcion {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #60747b;
+}
+
+
+/* =========================
+   OCULTAR RADIO BUTTONS
+========================= */
+
+input[name="consumo"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* =========================
+   TARJETA PRINCIPAL
+========================= */
+
+.progreso__tarjeta {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.progreso__icono {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.progreso__subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ESTADOS DEL PROGRESO
+========================= */
+
+.progreso__estado {
+    display: none;
+}
+
+.progreso__estado strong {
+    display: block;
+    font-size: 2.2rem;
+    color: #1d9cc2;
+    margin-bottom: 5px;
+}
+
+.progreso__estado span {
+    display: block;
+    color: #60747b;
+    margin-bottom: 20px;
+}
+
+.progreso__estado p {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #40535a;
+}
+
+
+/* =========================
+   MOSTRAR ESTADO SELECCIONADO
+========================= */
+
+/* Estado inicial: 0 ml */
+
+#consumo-0:checked ~ .progreso__tarjeta .progreso__estado--0 {
+    display: block;
+}
+
+
+/* Estado: 500 ml */
+
+#consumo-500:checked ~ .progreso__tarjeta .progreso__estado--500 {
+    display: block;
+}
+
+
+/* Estado: 1000 ml */
+
+#consumo-1000:checked ~ .progreso__tarjeta .progreso__estado--1000 {
+    display: block;
+}
+
+
+/* Estado: 1500 ml */
+
+#consumo-1500:checked ~ .progreso__tarjeta .progreso__estado--1500 {
+    display: block;
+}
+
+
+/* Estado: 2000 ml */
+
+#consumo-2000:checked ~ .progreso__tarjeta .progreso__estado--2000 {
+    display: block;
+}
+
+/* =========================
+   BARRA DE PROGRESO
+========================= */
+
+.progreso__barra {
+    width: 100%;
+    height: 22px;
+    background-color: #e2edf0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progreso__barra-completada {
+    height: 100%;
+    width: 0%;
+    background-color: #1d9cc2;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+
+/* =========================
+   PORCENTAJE DE LA BARRA
+========================= */
+
+/* 0% */
+
+#consumo-0:checked
+~ .progreso__tarjeta
+.progreso__estado--0
+.progreso__barra-completada {
+    width: 0%;
+}
+
+
+/* 25% */
+
+#consumo-500:checked
+~ .progreso__tarjeta
+.progreso__estado--500
+.progreso__barra-completada {
+    width: 25%;
+}
+
+
+/* 50% */
+
+#consumo-1000:checked
+~ .progreso__tarjeta
+.progreso__estado--1000
+.progreso__barra-completada {
+    width: 50%;
+}
+
+
+/* 75% */
+
+#consumo-1500:checked
+~ .progreso__tarjeta
+.progreso__estado--1500
+.progreso__barra-completada {
+    width: 75%;
+}
+
+
+/* 100% */
+
+#consumo-2000:checked
+~ .progreso__tarjeta
+.progreso__estado--2000
+.progreso__barra-completada {
+    width: 100%;
+}
+
+
+/* =========================
+   ESTADO DE CUMPLIMIENTO
+========================= */
+
+.progreso__cumplimiento {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #dff4e5;
+    color: #20723a;
+    font-weight: bold;
+}
+
+
+/* =========================
+   OPCIONES INTERACTIVAS
+========================= */
+
+.progreso__opciones {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e2edf0;
+}
+
+.progreso__opciones p {
+    margin-bottom: 18px;
+    color: #40535a;
+    font-weight: bold;
+}
+
+.progreso__botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.progreso__botones label {
+    padding: 12px 18px;
+    background-color: #eef7f9;
+    color: #1d9cc2;
+    border: 2px solid #cfe8ee;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.progreso__botones label:hover {
+    background-color: #dceff3;
+}
+
+
+/* =========================
+   BOTÓN SELECCIONADO
+========================= */
+
+#consumo-0:checked
+~ .progreso__tarjeta
+label[for="consumo-0"],
+
+#consumo-500:checked
+~ .progreso__tarjeta
+label[for="consumo-500"],
+
+#consumo-1000:checked
+~ .progreso__tarjeta
+label[for="consumo-1000"],
+
+#consumo-1500:checked
+~ .progreso__tarjeta
+label[for="consumo-1500"],
+
+#consumo-2000:checked
+~ .progreso__tarjeta
+label[for="consumo-2000"] {
+    background-color: #1d9cc2;
+    color: #ffffff;
+    border-color: #1d9cc2;
+}
+
+
+/* =========================
+   RESUMEN
+========================= */
+
+.progreso__resumen {
+    margin-top: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.progreso__dato {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.progreso__dato span {
+    display: block;
+    color: #60747b;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.progreso__dato strong {
+    font-size: 1.2rem;
+    color: #1d9cc2;
+}
+
+
+/* =========================
+   VALOR DINÁMICO DEL RESUMEN
+========================= */
+
+.resumen__valor {
+    display: none;
+}
+
+
+/* Consumo 0 ml */
+
+#consumo-0:checked
+~ .progreso__resumen
+.resumen__valor--0 {
+    display: block;
+}
+
+
+/* Consumo 500 ml */
+
+#consumo-500:checked
+~ .progreso__resumen
+.resumen__valor--500 {
+    display: block;
+}
+
+
+/* Consumo 1000 ml */
+
+#consumo-1000:checked
+~ .progreso__resumen
+.resumen__valor--1000 {
+    display: block;
+}
+
+
+/* Consumo 1500 ml */
+
+#consumo-1500:checked
+~ .progreso__resumen
+.resumen__valor--1500 {
+    display: block;
+}
+
+
+/* Consumo 2000 ml */
+
+#consumo-2000:checked
+~ .progreso__resumen
+.resumen__valor--2000 {
+    display: block;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+.pie {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #dbe7eb;
+    color: #60747b;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .encabezado {
+        padding: 18px 20px;
+    }
+
+    .encabezado__contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navegacion {
+        justify-content: center;
+    }
+
+    .progreso {
+        padding: 40px 15px;
+    }
+
+    .progreso__titulo {
+        font-size: 1.8rem;
+    }
+
+    .progreso__tarjeta {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE - CELULAR
+========================= */
+
+@media (max-width: 480px) {
+
+    .navegacion {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .progreso__titulo {
+        font-size: 1.6rem;
+    }
+
+    .progreso__tarjeta {
+        padding: 25px 15px;
+    }
+
+    .progreso__estado strong {
+        font-size: 1.8rem;
+    }
+
+    .progreso__botones {
+        flex-direction: column;
+    }
+
+    .progreso__botones label {
+        width: 100%;
+    }
+
+    .progreso__resumen {
+        grid-template-columns: 1fr;
+    }
+
+}
