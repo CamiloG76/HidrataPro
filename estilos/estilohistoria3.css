@@ -445,3 +445,87 @@ label[for="consumo-2000"] {
 .resumen__valor--2000 {
     display: block;
 }
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+.pie {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #dbe7eb;
+    color: #60747b;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .encabezado {
+        padding: 18px 20px;
+    }
+
+    .encabezado__contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navegacion {
+        justify-content: center;
+    }
+
+    .progreso {
+        padding: 40px 15px;
+    }
+
+    .progreso__titulo {
+        font-size: 1.8rem;
+    }
+
+    .progreso__tarjeta {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE - CELULAR
+========================= */
+
+@media (max-width: 480px) {
+
+    .navegacion {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .progreso__titulo {
+        font-size: 1.6rem;
+    }
+
+    .progreso__tarjeta {
+        padding: 25px 15px;
+    }
+
+    .progreso__estado strong {
+        font-size: 1.8rem;
+    }
+
+    .progreso__botones {
+        flex-direction: column;
+    }
+
+    .progreso__botones label {
+        width: 100%;
+    }
+
+    .progreso__resumen {
+        grid-template-columns: 1fr;
+    }
+
+}
