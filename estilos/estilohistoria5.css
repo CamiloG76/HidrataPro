@@ -1,0 +1,408 @@
+
+/* ========================================
+   HIDRATAPRO - ESTILOS GENERALES
+   HU-05: CONFIGURAR META DIARIA
+   ======================================== */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f9fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* ---------- ENCABEZADO ---------- */
+
+.encabezado {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbe7ec;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.encabezado__contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.encabezado__logo {
+    color: #168aad;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navegacion a {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.navegacion a:hover {
+    color: #168aad;
+}
+
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+
+.meta {
+    min-height: calc(100vh - 145px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+}
+
+.meta__contenido {
+    width: 100%;
+    max-width: 560px;
+}
+
+
+/* ---------- ENCABEZADO DE LA PÁGINA ---------- */
+
+.meta__encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.meta__rotulo {
+    color: #168aad;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.meta__titulo {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #12343b;
+    margin-bottom: 12px;
+}
+
+.meta__descripcion {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ---------- TARJETA ---------- */
+
+.meta__tarjeta {
+    background-color: #ffffff;
+
+    border: 1px solid #dcebf0;
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0 10px 30px rgba(31, 78, 94, 0.08);
+
+    text-align: center;
+}
+
+
+/* ---------- ICONO ---------- */
+
+.meta__icono {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #e3f6fa;
+    border-radius: 50%;
+
+    font-size: 30px;
+}
+
+
+/* ---------- TEXTOS ---------- */
+
+.meta__subtitulo {
+    color: #12343b;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.meta__texto {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+
+/* ---------- FORMULARIO ---------- */
+
+.meta__formulario {
+    text-align: left;
+}
+
+.meta__campo {
+    margin-bottom: 20px;
+}
+
+.meta__campo label {
+    display: block;
+
+    color: #374151;
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.meta__entrada {
+    display: flex;
+    align-items: center;
+
+    border: 2px solid #d7e6eb;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    transition: 0.2s ease;
+}
+
+.meta__entrada:focus-within {
+    border-color: #168aad;
+    box-shadow: 0 0 0 3px rgba(22, 138, 173, 0.1);
+}
+
+.meta__entrada input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 14px 15px;
+
+    font-size: 17px;
+    color: #1f2937;
+}
+
+.meta__entrada input::placeholder {
+    color: #9ca3af;
+}
+
+.meta__entrada span {
+    padding-right: 15px;
+
+    color: #64748b;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* ---------- OPCIONES DE META ---------- */
+
+.meta__opciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.meta__opciones button {
+    border: 1px solid #cfe2e8;
+    background-color: #f8fcfd;
+
+    color: #42616a;
+
+    border-radius: 9px;
+
+    padding: 11px 5px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.meta__opciones button:hover {
+    background-color: #e3f6fa;
+    border-color: #168aad;
+    color: #168aad;
+}
+
+
+/* ---------- BOTÓN PRINCIPAL ---------- */
+
+.boton {
+    width: 100%;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.boton--principal {
+    background-color: #168aad;
+    color: #ffffff;
+}
+
+.boton--principal:hover {
+    background-color: #117494;
+    transform: translateY(-1px);
+}
+
+.boton--principal:active {
+    transform: translateY(0);
+}
+
+
+/* ---------- PIE DE PÁGINA ---------- */
+
+.pie {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #8498a0;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .encabezado__contenido {
+        padding: 16px 20px;
+    }
+
+    .navegacion {
+        gap: 12px;
+    }
+
+    .navegacion a {
+        font-size: 12px;
+    }
+
+    .meta__titulo {
+        font-size: 30px;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVE - CELULAR
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .encabezado {
+        position: static;
+    }
+
+    .encabezado__contenido {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 15px;
+    }
+
+    .navegacion {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    .navegacion a {
+        background-color: #f4f9fb;
+        border-radius: 7px;
+        padding: 9px 5px;
+    }
+
+    .meta {
+        padding: 40px 15px;
+        align-items: flex-start;
+    }
+
+    .meta__titulo {
+        font-size: 27px;
+    }
+
+    .meta__descripcion {
+        font-size: 14px;
+    }
+
+    .meta__tarjeta {
+        padding: 28px 20px;
+        border-radius: 16px;
+    }
+
+    .meta__subtitulo {
+        font-size: 21px;
+    }
+
+    .meta__opciones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meta__opciones button {
+        padding: 13px 5px;
+    }
+
+}
+
